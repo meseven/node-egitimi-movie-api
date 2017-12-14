@@ -6,11 +6,22 @@ const Movie = require('../models/Movie');
 
 router.get('/', (req, res) => {
 	const promise = Movie.find({ });
+
 	promise.then((data) => {
 		res.json(data);
 	}).catch((err) => {
 		res.json(err);
 	})
+});
+
+router.get('/:movie_id', (req, res) => {
+	const promise = Movie.findById(req.params.movie_id);
+
+	promise.then((movie) => {
+		res.json(movie);
+	}).catch((err) => {
+		res.json(err);
+	});
 });
 
 router.post('/', (req, res, next) => {
