@@ -11,6 +11,7 @@ Node.JS Eğitim Seti - Movie API
 | /api/movies/:movie_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a movie with new info. |
 | /api/movies/:movie_id | `DELETE` | Empty | Delete a movie. |
 | /api/movies/top10 | `GET` | Empty | Get the top 10 movies. |
+| /api/movies/between/:start_year/:end_year | `GET` | Empty | Movies between two dates. |
 
 # Directors
 
