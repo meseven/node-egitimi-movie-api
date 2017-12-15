@@ -22,4 +22,4 @@ Node.JS Eğitim Seti - Movie API
 | /api/directors/:director_id | `GET` | Empty | Get a director. |
 | /api/directors/:director_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a director with new info. |
 | /api/directors/:director_id | `DELETE` | Empty | Delete a director. |
-| /api/directors/best10movie | `GET` | Empty | The director's top 10 films. |
+| /api/directors/:director_id/best10movie | `GET` | Empty | The director's top 10 films. |
