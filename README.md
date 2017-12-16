@@ -24,7 +24,7 @@ Node.JS Eğitim Seti - Movie API
 | /api/directors/:director_id | `DELETE` | Empty | Delete a director. |
 | /api/directors/:director_id/best10movie | `GET` | Empty | The director's top 10 films. |
 
-# Users
+# Register
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
