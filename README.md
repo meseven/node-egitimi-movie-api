@@ -28,4 +28,4 @@ Node.JS Eğitim Seti - Movie API
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /api/users/register | `POST` | { username: 'foo', password:'1234' } | Create a new user. |
+| /register | `POST` | { username: 'foo', password:'1234' } | Create a new user. |
