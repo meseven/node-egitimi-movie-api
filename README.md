@@ -1,4 +1,4 @@
-[Build Status](https://api.travis-ci.org/meseven/node-egitimi-movie-api.svg)(https://travis-ci.org/meseven/node-egitimi-movie-api)
+[![Build status](https://api.travis-ci.org/meseven/node-egitimi-movie-api.svg)](https://travis-ci.org/meseven/node-egitimi-movie-api)
 
 # node-egitimi-movie-api
 Node.JS Eğitim Seti - Movie API
