@@ -41,6 +41,7 @@ router.get('/:movie_id', (req, res, next) => {
 	const promise = Movie.findById(req.params.movie_id);
 
 	promise.then((movie) => {
+		console.log(movie);
 		if (!movie)
 			next({ message: 'The movie was not found.', code: 99 });
 
