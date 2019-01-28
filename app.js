@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -37,10 +36,6 @@ app.use('/', index);
 app.use('/api', verifyToken);
 app.use('/api/movies', movie);
 app.use('/api/directors', director);
-
-app.use((err, req, res) => {
-	console.log('hey11');
-});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
