@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-//app.use('/api', verifyToken);
+app.use('/api', verifyToken);
 app.use('/api/movies', movie);
 app.use('/api/directors', director);
 
