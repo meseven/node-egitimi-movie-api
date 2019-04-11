@@ -12,8 +12,22 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/register', (req, res, next) => {
+router.post('/register', async (req, res, next) => {
 	const { username, password } = req.body;
+
+	try{
+		const userExists = await User.findOne({username});
+		if (userExists) {
+		  throw new Error;
+		}
+	}catch (e) {
+		res.json({
+			status: false,
+			message: 'Username already exists.'
+		});
+		return false;
+	}
+
 
 	bcrypt.hash(password, 10).then((hash) => {
 		const user = new User({
