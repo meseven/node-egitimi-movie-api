@@ -23,7 +23,9 @@ router.post('/register', async (req, res, next) => {
 	}catch (e) {
 		res.json({
 			status: false,
-			username: 'Username already exists.'
+			errors: {
+				username: 'Username already exists.'
+			}
 		});
 		return false;
 	}
