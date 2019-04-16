@@ -60,14 +60,14 @@ router.post("/authenticate", (req, res) => {
 			if (!user) {
 				res.json({
 					status: false,
-					message: "Authentication failed, user not found.",
+					message: "Wrong username or password.",
 				});
 			} else {
 				bcrypt.compare(password, user.password).then(result => {
 					if (!result) {
 						res.json({
 							status: false,
-							message: "Authentication failed, wrong password.",
+							message: "Wrong username or password.",
 						});
 					} else {
 						const payload = {
