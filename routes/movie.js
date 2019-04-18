@@ -6,7 +6,7 @@ const Movie = require("../models/Movie");
 
 router.get("/", (req, res) => {
 	const promise = Movie.find()
-		.sort({ date: -1 })
+		.sort({ _id: -1 })
 		.limit(20);
 
 	promise
