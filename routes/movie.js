@@ -5,7 +5,9 @@ const router = express.Router();
 const Movie = require("../models/Movie");
 
 router.get("/", (req, res) => {
-	const promise = Movie.find();
+	const promise = Movie.find()
+		.sort({ date: -1 })
+		.limit(20);
 
 	promise
 		.then(data => {
